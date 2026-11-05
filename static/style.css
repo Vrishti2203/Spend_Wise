@@ -1,0 +1,352 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f8f6fc;
+    color: #302943;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    padding: 25px 8%;
+    border-bottom: 1px solid #eee9f5;
+}
+
+header h1 {
+    color: #7653b5;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: #91899f;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Main dashboard */
+main {
+    width: 86%;
+    max-width: 1050px;
+    margin: 38px auto;
+}
+
+/* Dashboard cards */
+section {
+    background: #ffffff;
+    padding: 28px;
+    margin-bottom: 25px;
+    border: 1px solid #eeeaf4;
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(65, 43, 100, 0.04);
+}
+
+section h2 {
+    font-size: 20px;
+    color: #392e4d;
+    margin-bottom: 20px;
+}
+
+/* Monthly spending card */
+.summary {
+    background: linear-gradient(120deg, #7653b5, #a58bd3);
+    color: white;
+    border: none;
+    padding: 32px;
+}
+
+.summary h2 {
+    color: #f4edff;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.summary h1 {
+    font-size: 42px;
+    margin: 12px 0;
+    letter-spacing: -1px;
+}
+
+.summary p {
+    color: #eee5ff;
+    font-size: 14px;
+}
+
+/* Expense form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e8e2f0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #393044;
+    background: #fcfbfe;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #9674c9;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(150, 116, 201, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+/* Buttons */
+button {
+    background: #7653b5;
+    color: white;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #62419c;
+    transform: translateY(-1px);
+}
+
+/* Expense entries */
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5px;
+    border-bottom: 1px solid #f0edf4;
+    gap: 12px;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-item h3 {
+    font-size: 15px;
+    color: #392e4d;
+    margin-bottom: 6px;
+}
+
+.expense-item p {
+    color: #9991a5;
+    font-size: 13px;
+}
+
+.expense-item strong {
+    color: #7653b5;
+    font-size: 15px;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #fff0f0;
+    color: #d65b65;
+    padding: 9px 13px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #ffe1e3;
+    color: #bd3e49;
+}
+
+/* Messages */
+#message {
+    margin-top: 13px;
+    font-size: 14px;
+}
+
+/* AI assistant */
+.ai-section {
+    background: #fbf9ff;
+}
+
+.chat-placeholder {
+    background: #f3effb;
+    border: 1px dashed #cbbbe3;
+    padding: 28px;
+    border-radius: 13px;
+    text-align: center;
+    color: #8069a5;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #a19aab;
+    font-size: 13px;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    main {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    header {
+        padding: 22px 5%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .summary h1 {
+        font-size: 34px;
+    }
+
+    .expense-item {
+        flex-wrap: wrap;
+    }
+}
+.expense-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+}
+
+.edit-btn {
+    background: #eee8f7;
+    color: #7653b5;
+}
+
+.edit-btn:hover {
+    background: #e2d7f1;
+}
+
+/* Edit expense section */
+.edit-section {
+    margin-top: 28px;
+    padding: 24px;
+    background: #faf9fc;
+    border: 1px solid #e9e4f0;
+    border-radius: 12px;
+}
+
+.edit-section h2 {
+    margin-bottom: 20px;
+}
+
+.edit-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-section label {
+    font-size: 14px;
+    color: #50475d;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-actions button {
+    flex: 1;
+}
+
+.cancel-btn {
+    background: #e9e6ef;
+    color: #514960;
+}
+
+.cancel-btn:hover {
+    background: #dcd7e6;
+}
+
+/* SPENDWISE AI CHAT */
+
+.chat-box {
+    margin-top: 20px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.chat-message {
+    max-width: 85%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    background: #e9e7ff;
+    color: #28234f;
+}
+
+.chat-message.assistant {
+    align-self: flex-start;
+    background: #f2f3f5;
+    color: #252525;
+}
+
+.chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.chat-form button {
+    width: auto;
+    min-width: 85px;
+}
+
+.chat-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
